@@ -30,9 +30,11 @@ Steps 2 and 3 are summarized from a detailed [tutorial on configuring remote SSH
 First, you will need to [download and install VS Code](https://code.visualstudio.com/) on [macOS](https://code.visualstudio.com/docs/setup/mac), [Linux](https://code.visualstudio.com/docs/setup/setup-overview), or [Windows](https://code.visualstudio.com/docs/setup/windows).
 
 ### (2) Configure remote SSH in VS Code
-To configure SSH in VS Code, you will need to [install the Remote - SSH extension](vscode:extension/ms-vscode-remote.remote-ssh). Once you have installed the `Remote - SSH extension`, a new green Status bar item will appear in the far bottom left corner of the VS Code window, just below the settings icon.
+- To configure SSH in VS Code, you will need to [install the Remote - SSH extension](vscode:extension/ms-vscode-remote.remote-ssh). Once you have installed the `Remote - SSH extension`, a new green Status bar item will appear in the far bottom left corner of the VS Code window, just below the settings icon.
+
 ![Remote - SSH extension icon](https://code.visualstudio.com/assets/docs/remote/ssh-tutorial/remote-status-bar.png)
-Click on the green Status bar item.
+
+ - Click on the green Status bar item.
 
 ### (3) Optional: Add a public SSH key to your HPC account for easier access to the HPC
 
