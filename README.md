@@ -12,4 +12,8 @@ To complete to complete the tasks in this tutorial you will need to an OpenSSH c
 
 1. `Search` for <span style="color:blue;">`PowerShell`</span> in the Windows start menu.
 2. Open `PowerShell` as an `administrator` by clicking the <span style="color:blue;">`Run as administrator`</span> icon.
-3. Inside `Powershell`, type '<span style="color:red;">`WSL --install`</span>' and then press <span style="color:blue;">`Enter`</span> to install WSL, along with all necessary features and the default Linux distribution, that is, `Ubuntu`.
+3. Inside `Powershell`, type <span style="color:red;">`WSL --install`</span> and then press <span style="color:blue;">`Enter`</span> to install WSL, along with all necessary features and the default Linux distribution, that is, `Ubuntu`.
+
+1. `Search` for `<font color="blue">PowerShell</font>` in the Windows start menu.
+2. Open `<font color="blue">PowerShell</font>` as an `<font color="blue">administrator</font>` by clicking the `<font color="blue">Run as administrator</font>` icon.
+3. Inside `<font color="red">Powershell</font>`, type `<font color="red">WSL --install</font>` and then press `<font color="blue">Enter</font>` to install WSL, along with all necessary features and the default Linux distribution, that is, `<font color="blue">Ubuntu</font>`.
