@@ -10,6 +10,6 @@ A repository to enhance the management and reproducibility of your research by i
 ### Prerequsite:
 To complete to complete the tasks in this tutorial you will need to an OpenSSH compatible SSH client such as `OpenSSH client` as well as `git` installed on your computer. These come standard with MacOS and Linux operating systems. To access these on Windows you will need to install Linux Bash Shell. This can be done by installing [Windows Subsystem for Linux (WSL)](https://apps.microsoft.com/store/detail/windows-subsystem-for-linux/9P9TQF7MRM4R) followed by [Ubuntu](https://apps.microsoft.com/store/detail/ubuntu/9PDXGNCFSCZV) from the Microsoft Store. Or you can follow a [dedicated tutorial](https://itsfoss.com/install-bash-on-windows/) or follow the instructione bellow:
 
-1. Search for <span style="color:blue;">`PowerShell`</span> in the Windows start menu.
-2. Open PowerShell as an admiistratior by clicking the `<span style="color:blue;">Run as administator` icon.
-3. Inside Powershell, type '<span style="color:red;">WSL --install</span>' and then press <span style="color:blue;"><Enter>,  to install WSL, along with all necessary features and the default Linux distribution, that is, Unbutu.
+1. `Search` for <span style="color:blue;">`PowerShell`</span> in the Windows start menu.
+2. Open `PowerShell` as an `administrator` by clicking the <span style="color:blue;">`Run as administrator`</span> icon.
+3. Inside `Powershell`, type '<span style="color:red;">`WSL --install`</span>' and then press <span style="color:blue;">`Enter`</span> to install WSL, along with all necessary features and the default Linux distribution, that is, `Ubuntu`.
