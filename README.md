@@ -36,7 +36,7 @@ First, you will need to [download and install VS Code](https://code.visualstudio
 
 Once you have installed the `Remote - SSH extension`, a new green Status bar item will appear in the far bottom left corner of the VS Code window, just below the settings icon.
 
-   ![gree Status bar item]() (https://code.visualstudio.com/assets/docs/remote/ssh-tutorial/remote-status-bar.png)
+   ![gree Status bar item](https://code.visualstudio.com/assets/docs/remote/ssh-tutorial/remote-status-bar.png)
 
  - Click on the green Status bar item.
  - In the search bar at the top of the top of the window, selet `Connect to Host...` followed by `Add New SSH Host...`
