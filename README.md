@@ -36,13 +36,13 @@ First, you will need to [download and install VS Code](https://code.visualstudio
 
  - Click on the green Status bar item.
  - In the search bar at the top of the top of the window, selet `Connect to Host...` followed by `Add New SSH Host...`
- - Entre your SSH Host details, for example, `ssh -p 6022 `<p><span style="color:blue;">\<your username><p>`@ltu-hpc.latrobe.edu.au`
+ - Entre your SSH Host details, for example, `ssh -p 6022 ``<p><span style="color:blue;">your username><span></p>``@ltu-hpc.latrobe.edu.au`
 
 ### (3) Optional: Add a public SSH key to your HPC account for easier access to the HPC
 
 - In the terminal, run the command `ssh-keygen -t ed25519`. This will generate the SSH key.
 - Press `Enter` to use the default file name: "id_vscode."
 - When prompted to enter a passphrase, press the "Enter Key" (don't create a passphrase).
-- In VS Code, navigate to the `/Users/<p><span style="color:blue;">\<your username></span><p>/.ssh/` folder on your personal computer, and copy the public SSH key, e.g., "id_vscode.pub." This will be copied to the HPC in the following step.
+- In VS Code, navigate to the `/Users/<p><span style="color:blue;">your username</span></p>/.ssh/` folder on your personal computer, and copy the public SSH key, e.g., "id_vscode.pub." This will be copied to the HPC in the following step.
 - Alternatively, open a terminal and enter the command `nano /Users/username/.ssh/`. In VS Code, navigate to your home directory on the HPC and open the ".ssh" folder. Paste the public key into the "authorized_keys" document.
 - DONE!
