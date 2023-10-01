@@ -36,13 +36,61 @@ First, you will need to [download and install VS Code](https://code.visualstudio
 
  - Click on the green Status bar item.
  - In the search bar at the top of the top of the window, selet `Connect to Host...` followed by `Add New SSH Host...`
- - Entre your SSH Host details, for example, `ssh -p 6022 ``<p><span style="color:blue;">your username><span></p>``@ltu-hpc.latrobe.edu.au`
+ - Entre your SSH Host details, for example, `ssh -p 6022 username@ltu-hpc.latrobe.edu.au` and then press `Enter`
+ - Select the `/User/username/.ssh/config` file to save the SSH Host details
+ - Next we'll generate a pair of SSH keys to streamline HPC access via VS Code.
 
-### (3) Optional: Add a public SSH key to your HPC account for easier access to the HPC
+### (3) Generate a pair of SSH keys and add the public SSH key to your HPC account to link you personal computer to the HPC
 
-- In the terminal, run the command `ssh-keygen -t ed25519`. This will generate the SSH key.
-- Press `Enter` to use the default file name: "id_vscode."
-- When prompted to enter a passphrase, press the "Enter Key" (don't create a passphrase).
-- In VS Code, navigate to the `/Users/<p><span style="color:blue;">your username</span></p>/.ssh/` folder on your personal computer, and copy the public SSH key, e.g., "id_vscode.pub." This will be copied to the HPC in the following step.
-- Alternatively, open a terminal and enter the command `nano /Users/username/.ssh/`. In VS Code, navigate to your home directory on the HPC and open the ".ssh" folder. Paste the public key into the "authorized_keys" document.
-- DONE!
+- In the terminal, set the working directory to your .ssh subdirectory by running the command `cd /Users/lukeflorence/.ssh` 
+- Next, entre the command `ssh-keygen -t ed25519`. This will generate a pair of SSH keys.
+- Press `Enter` to use the default file name `id_ed25519)` or define a unique file name such as `id_vscode`.
+- When prompted to enter a passphrase, press the `Enter` (don't create a passphrase).
+- In VS Code, navigate to the `/Users/username/.ssh/` folder using the `EXPLORER` tab to the left of the window. Open the public SSH file, for example, the `id_vscode.pub` file, and copy its contents. Alternitivly, in the terminal  within VS Code, entre the command `nano /Users/username/.ssh/id_vscode.pub` and copy the contents of the file, then press `Ctrl + X` to exit nano. This public key will be copied to the HPC in the following step.
+- Press the green Status bar item in VS Code followed by`Connect to Host...` to connect to the HPC. From your user home directory on the HPC, navigate to and open the `.ssh` folder using the `EXPLORER` tab to the left of the window. Open the `authorized_keys` file and paste your public key here. Alternatively, while connected to the HPC, open terminal and enter path to you `authorised_key` file using nano, for example `nano /home/ad/username/.ssh/authorized_keys`. Paste your key within the `authorised_key` file then press `Ctrl + X` to exit followed by `Y` to save and press `Enter` to continue. 
+- Your personal computer and HPC now share a set of key to streamline your access to the HPC.
+
+## Set up Conda envrionments to ensure the reproducability of your research
+
+### (1) Install mambaforge
+
+### (2) Create required environemnts 
+In this examples, I create a `shell` environemnt to run my `bash` scripts and `R` environemnt to run `R`. 
+    -
+
+### (3) Install R packages into your project folder on the HPC
+
+In this section I will explain how to install `R` packages so they can be accessed from within a 'slurm' script.
+
+If you plan to run intensive jobs with `R` on the HPC, you will need to exicute `R` scripts via `bash`. To do this, `R` packages will need to be accessed by the HPC. However, `R` packages are installed within your within your home directory by default, and the HPC cannot access your home directrory within an `R` slurm because of the default privacy settings on the HPC. Therefore, when installing and requireing `R` packages they need to be saved and called from an accessable directory, such as you project directory.
+
+## Configure R to take advantage of Visual Studio Code tools for R
+
+In this section, we will Configuring the "R › Rpath: Linux" and "Rterm: Linux" settings in Visual Studio Code (VS Code).
+
+Configurging these settings are essential to establishing effective communication between VS Code and your R installation on Linux. They ensure that VS Code can locate and interact with the R interpreter and, if desired, an alternative interactive R terminal, enabling you to write, run, and debug R code seamlessly within the VS Code environment, as well as to take advantage of tool such as R code completeion withn VS Code.
+
+The follwing steps will explain how to configuring (1) the "R › Rpath: Linux" and (2) the "Rterm: Linux" settings in VS Code.
+
+### Step 1
+First we need to obtain the `R › Rpath: Linux`. You can obtain this from your R environment or from the R module on the HPC.
+
+To use R from your R environment, type the follwoing commands one by one:
+`conda activate R
+which R`
+
+You should use the output, for example `/data/group/"your_lab_name"/home/"your-username"/mambaforge/envs/R/bin/R`, for the "R › Rpath: Linux" setting in VS Code (Step 2).
+
+Alternitivly, if you are not using an R environement, 
+
+
+Once you have obtained the paths for both settings, you can configure them in Visual Studio Code:
+
+ - Open VS Code on your computer.
+ - Go to "File" > "Preferences" > "Settings" or use the keyboard shortcut Ctrl+, (Windows/Linux) or Cmd+, (macOS).
+ - In the search bar at the top of the settings panel, type "Rpath" to quickly locate the "R › Rpath: Linux" setting.
+ - In the "R › Rpath: Linux" setting, enter the path to the R executable you found in step 1.
+ - Similarly, search for "Rterm" to locate the "Rterm: Linux" setting and enter the path to the interactive R terminal you want to use, either the R executable itself or the "radian" executable.
+ - Save your settings.
+
+With these paths configured correctly, VS Code should work properly with your R installation on Linux.
