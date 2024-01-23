@@ -1,6 +1,6 @@
 # Repro-ject
 
-A repository designed to enhance the management and reproducibility of your research by integrating Visual Studio Code (VS Code), High-Performance Computing (HPC), GitHub, and Conda environments into your project workflow.
+This repository provides an overview of how I have integrated Visual Studio Code (VS Code), High-Performance Computing (HPC), GitHub, and Conda environments into my project workflow. By integrating these tools into my workflow, I aim to enhance the management and reproducibility of my research.
 
 ### The tutorial is composed of four main sections:
 1. How to install VS Code and how to configure a HPC connection.
