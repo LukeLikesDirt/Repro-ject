@@ -1,6 +1,6 @@
 # Repro-ject
 
-This repository provides an overview of how I have integrated Visual Studio Code (VS Code), High-Performance Computing (HPC), GitHub, and Conda environments into my project workflow. By integrating these tools into my workflow, I aim to enhance the management and reproducibility of my research.
+This repository provides an overview of how to integrate Visual Studio Code (VS Code), High-Performance Computing (HPC), GitHub, and Conda environments into your project workflow. By integrating these tools into your workflow, you can enhance the management and reproducibility of your research.
 
 ### The tutorial is composed of four main sections:
 1. How to install VS Code and how to configure a HPC connection.
@@ -11,19 +11,19 @@ This repository provides an overview of how I have integrated Visual Studio Code
 ### Prerequisite:
 To complete the tasks in this tutorial, you will need an OpenSSH-compatible client, such as `OpenSSH Client`, as well as the version control system `git` installed on your computer. These are default software on macOS and Linux operating systems. To access them on Windows, you will need to install the Linux Bash Shell. You can do this by installing [Windows Subsystem for Linux (WSL)](https://apps.microsoft.com/store/detail/windows-subsystem-for-linux/9P9TQF7MRM4R) followed by [Ubuntu](https://apps.microsoft.com/store/detail/ubuntu/9PDXGNCFSCZV) from the Microsoft Store. Alternatively, you can follow a [dedicated tutorial](https://itsfoss.com/install-bash-on-windows/) or the instructions below:
 
-##### Install Windows Subsystem for Linux (WSL) and Ubuntu
-1. *Open PowerShell as an administrator* by searching for `PowerShell` in the Windows start menu and clicking the `Run as administrator` icon.
+#### Install Windows Subsystem for Linux (WSL) and Ubuntu:
+1. **Open PowerShell as an administrator** by searching for `PowerShell` in the Windows start menu and clicking the `Run as administrator` icon.
 2. Inside PowerShell, type `WSL --install` and then press `Enter` to install WSL along with all necessary features and the default Linux distribution, which is Ubuntu.
-3. Once completed, you will need to *reboot your computer* for the changes to be applied.
+3. Once completed, you will need to **reboot your computer** for the changes to be applied.\
   ![Install Powershell](https://github.com/LukeLikesDirt/Repro-ject/blob/main/.pics/install_powershell.png)
 ##### Configure Ubuntu
-1. Next, open Ubuntu by searching for `Ubuntu` in the Windows start menu.
-  ![Search for Ubuntu](https://github.com/LukeLikesDirt/Repro-ject/blob/main/.pics/search_for_Ubuntu.png)
-2. Ubuntu will prompt you to *enter a new Unix username and password*. Provide these details and then press `Enter` to continue.
-  ![Username Password](https://github.com/LukeLikesDirt/Repro-ject/blob/main/.pics/username_password.png)
-3. Once logged in, update the installed Ubuntu by running the `sudo apt update` command followed by `sudo apt full-upgrade`.
-  ![Update Ubuntu](https://github.com/LukeLikesDirt/Repro-ject/blob/main/.pics/update_Ubuntu.png)
-*You are now ready to complete this tutorial*.
+1. Next, open Ubuntu by searching for `Ubuntu` in the Windows start menu.\
+  ![Search for Ubuntu](https://github.com/LukeLikesDirt/Repro-ject/blob/main/.pics/search_for_Ubuntu.png)\
+2. Ubuntu will prompt you to **enter a new Unix username and password**. Provide these details and then press `Enter` to continue.\
+  ![Username Password](https://github.com/LukeLikesDirt/Repro-ject/blob/main/.pics/username_password.png)\
+3. Once logged in, update the installed Ubuntu by running the `sudo apt update` command followed by `sudo apt full-upgrade`.\
+  ![Update Ubuntu](https://github.com/LukeLikesDirt/Repro-ject/blob/main/.pics/update_Ubuntu.png)\
+**You are now ready to complete this tutorial**.\
 
 ## Connect VS Code to the HPC
 
@@ -31,17 +31,17 @@ To complete this section, you will need to have an [OpenSSH compatible SSH clien
 
 Steps 2 and 3 are summarised from a detailed [tutorial on configuring remote SSH in VS Code](https://code.visualstudio.com/docs/remote/ssh-tutorial). Follow the instructions in the link if you require a more detailed explanation.
 
-### Download and install VS Code
+### Download and install VS Code:
 First, you will need to [download and install VS Code](https://code.visualstudio.com/) on [macOS](https://code.visualstudio.com/docs/setup/mac), [Linux](https://code.visualstudio.com/docs/setup/setup-overview), or [Windows](https://code.visualstudio.com/docs/setup/windows).
 
-### Configure remote SSH in VS Code
+### Configure remote SSH in VS Code:
 1. To configure SSH in VS Code, you will need to install the 'Remote - SSH extension' by search for `remote` in the `EXTENTIONS` tab to the left of the VS Code window.
 
    ![Remote - SSH extension icon](https://github.com/LukeLikesDirt/Repro-ject/blob/main/.pics/remote.png)
 
 Once you have installed the `Remote - SSH extension`, a new green Status bar item will appear in the far bottom left corner of the VS Code window, just below the settings icon.
 
-   ![gree Status bar item](https://code.visualstudio.com/assets/docs/remote/ssh-tutorial/remote-status-bar.png)
+   ![gree Status bar item](https://github.com/LukeLikesDirt/Repro-ject/blob/main/.pics/remote-status-bar.png)
 
  - Click on the green Status bar item.
  - In the search bar at the top of the top of the window, selet `Connect to Host...` followed by `Add New SSH Host...`
