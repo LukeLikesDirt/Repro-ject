@@ -14,16 +14,23 @@ To complete the tasks in this tutorial, you will need an OpenSSH-compatible clie
 #### Install Windows Subsystem for Linux (WSL) and Ubuntu:
 1. **Open PowerShell as an administrator** by searching for `PowerShell` in the Windows start menu and clicking the `Run as administrator` icon.
 2. Inside PowerShell, type `WSL --install` and then press `Enter` to install WSL along with all necessary features and the default Linux distribution, which is Ubuntu.
-3. Once completed, you will need to **reboot your computer** for the changes to be applied.<br>
+3. Once completed, you will need to **reboot your computer** for the changes to be applied.  
+
   ![Install Powershell](https://github.com/LukeLikesDirt/Repro-ject/blob/main/.pics/install_powershell.png)
 ##### Configure Ubuntu
-1. Next, open Ubuntu by searching for `Ubuntu` in the Windows start menu.<br>
-  ![Search for Ubuntu](https://github.com/LukeLikesDirt/Repro-ject/blob/main/.pics/search_for_Ubuntu.png)<br>
-2. Ubuntu will prompt you to **enter a new Unix username and password**. Provide these details and then press `Enter` to continue.<br>
-  ![Username Password](https://github.com/LukeLikesDirt/Repro-ject/blob/main/.pics/username_password.png)<br>
-3. Once logged in, update the installed Ubuntu by running the `sudo apt update` command followed by `sudo apt full-upgrade`.<br>
-  ![Update Ubuntu](https://github.com/LukeLikesDirt/Repro-ject/blob/main/.pics/update_Ubuntu.png)<br>
-**You are now ready to complete this tutorial**.<br>
+1. Next, open Ubuntu by searching for `Ubuntu` in the Windows start menu.  
+
+  ![Search for Ubuntu](https://github.com/LukeLikesDirt/Repro-ject/blob/main/.pics/search_for_Ubuntu.png)  
+  
+2. Ubuntu will prompt you to **enter a new Unix username and password**. Provide these details and then press `Enter` to continue.  
+
+  ![Username Password](https://github.com/LukeLikesDirt/Repro-ject/blob/main/.pics/username_password.png)  
+  
+3. Once logged in, update the installed Ubuntu by running the `sudo apt update` command followed by `sudo apt full-upgrade`.  
+
+  ![Update Ubuntu](https://github.com/LukeLikesDirt/Repro-ject/blob/main/.pics/update_Ubuntu.png)  
+  
+**You are now ready to complete this tutorial**.  
 
 ## Connect VS Code to the HPC
 
