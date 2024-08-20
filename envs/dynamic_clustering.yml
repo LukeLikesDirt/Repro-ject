@@ -1,0 +1,23 @@
+# Name the environment
+name: dynamic_clustering
+
+# Tell Conda where to look for software that you want to install
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+  - base
+  - R
+
+# Tell Conda the software that you want to install
+dependencies:
+  - r-base=4.4.0
+  - r-essentials=4.3.1
+  - python=3.12.5
+  - biopython=1.84
+  - matplotlib=3.9.2
+  - scikit-learn=1.5.1
+  - scipy=1.14.0
+  - krona=2.8.1
+  - vsearch=2.28.1
+  - blast=2.16.0
