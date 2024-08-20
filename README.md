@@ -11,7 +11,7 @@ This repository provides an overview of how to integrate Visual Studio Code (VS 
 ### Prerequisite:
 To complete the tasks in this tutorial, you will need an OpenSSH-compatible client, such as `OpenSSH Client`, as well as the version control system `git` installed on your computer. These are default software on macOS and Linux operating systems. To access them on Windows, you will need to install the Linux Bash Shell. You can do this by installing [Windows Subsystem for Linux (WSL)](https://apps.microsoft.com/store/detail/windows-subsystem-for-linux/9P9TQF7MRM4R) followed by [Ubuntu](https://apps.microsoft.com/store/detail/ubuntu/9PDXGNCFSCZV) from the Microsoft Store. Alternatively, you can follow a [dedicated tutorial](https://itsfoss.com/install-bash-on-windows/) or the instructions below:
 
-#### Install Windows Subsystem for Linux (WSL) and Ubuntu:
+#### Install Windows Subsystem for Linux (WSL) and Ubuntu
 1. **Open PowerShell as an administrator** by searching for `PowerShell` in the Windows start menu and clicking the `Run as administrator` icon.
 2. Inside PowerShell, type `WSL --install` and then press `Enter` to install WSL along with all necessary features and the default Linux distribution, which is Ubuntu.
 3. Once completed, you will need to **reboot your computer** for the changes to be applied.  
@@ -58,7 +58,7 @@ Once you have installed the `Remote - SSH extension`, a new green Status bar ite
 
 ### (3) Generate a pair of SSH keys and add the public SSH key to your HPC account to link you personal computer to the HPC
 
-- In the terminal, set the working directory to your .ssh subdirectory by running the command `cd /Users/lukeflorence/.ssh` 
+- In the terminal, set the working directory to your .ssh subdirectory by running the command `cd /Users/*username*/.ssh` 
 - Next, entre the command `ssh-keygen -t ed25519`. This will generate a pair of SSH keys.
 - Press `Enter` to use the default file name `id_ed25519)` or define a unique file name such as `id_vscode`.
 - When prompted to enter a passphrase, press the `Enter` (don't create a passphrase).
@@ -69,16 +69,19 @@ Once you have installed the `Remote - SSH extension`, a new green Status bar ite
 ## Set up Conda envrionments to ensure the reproducability of your research
 
 ### (1) Install mambaforge
+To install `mambaforge`, you will need to follow the instructions on the [mambaforge website](https://mamba.readthedocs.io/en/latest/installation/mamba-installation.html), where they recommend starting with the [Miniforge distribution](https://github.com/conda-forge/miniforge)
 
-### (2) Create required environemnts 
-In this examples, I create a `shell` environemnt to run my `bash` scripts and `R` environemnt to run `R`. 
+### (2) Create required environemnts for your project with mambaforge
+In this examples, I create a `dynamic_clustering` environment for my bioinformatics analyses. In this environment, I will install packages from standard channels such as *conda-forge*, *bioconda*, and *defaults*, as well as a specific version of `R`. I will then install `R` packages that are rsrom the *CRAN* repository.
     -
 
 ### (3) Install R packages into your project folder on the HPC
 
-In this section I will explain how to install `R` packages so they can be accessed from within a 'slurm' script.
+In this section I will explain how to install `R` packages so they can be accessed from a *slurm* script.
 
-If you plan to run intensive jobs with `R` on the HPC, you will need to exicute `R` scripts via `bash`. To do this, `R` packages will need to be accessed by the HPC. However, `R` packages are installed within your within your home directory by default, and the HPC cannot access your home directrory within an `R` slurm because of the default privacy settings on the HPC. Therefore, when installing and requireing `R` packages they need to be saved and called from an accessable directory, such as you project directory.
+Packages that are installed 
+
+For the the HPC to access `R` on the HPC, you will need to execute `R` scripts via `bash`. To do this, `R` packages will need to be accessed by the HPC. However, `R` packages are installed within your within your home directory by default, and the HPC cannot access your home directory within an `R` slurm because of the default privacy settings on the HPC. Therefore, when installing and requiring `R` packages they need to be saved and called from an accessable directory, such as you project directory.
 
 ## Configure R to take advantage of Visual Studio Code tools for R
 
@@ -97,7 +100,7 @@ which R`
 
 You should use the output, for example `/data/group/"your_lab_name"/home/"your-username"/mambaforge/envs/R/bin/R`, for the "R › Rpath: Linux" setting in VS Code (Step 2).
 
-Alternitivly, if you are not using an R environement, 
+Alternatively, if you are not using an R environment, 
 
 
 Once you have obtained the paths for both settings, you can configure them in Visual Studio Code:
